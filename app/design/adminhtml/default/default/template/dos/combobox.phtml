@@ -1,0 +1,42 @@
+<?php
+/**
+ * @see Mainstreethost_DynamicOriginShipping_Block_Adminhtml_Origin_Edit_Combobox
+ */
+?>
+
+<?php if($this->originId): ?>
+<div id="combobox" class="combobox">
+    <div class="remaining">
+        <select id="remainingRegions" size="10" class="select multiselect dos-regions" multiple="multiple">
+            <?php foreach($this->GetRemainingRegions() as $region): ?>
+                <option value="<?php echo $region['value'] ?>"><?php echo $region['label']; ?></option>
+
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="movement-buttons">
+        <button id="moveAllToLeft" title="Move All" onclick="move(<?php echo $this->originId ?>,'assignedRegions','remainingRegions',true,'remove')" class="scalable" type="button">&lt;&lt;</button>
+        <button id="moveToLeft" title="Move Selected" onclick="move(<?php echo $this->originId ?>,'assignedRegions','remainingRegions',false,'remove')" class="scalable" type="button">&lt;</button>
+        <button id="moveToRight" title="Move Selected" onclick="move(<?php echo $this->originId ?>,'remainingRegions','assignedRegions',false,'add')" class="scalable" type="button">&gt;</button>
+        <button id="moveAllToRight" title="Move All" onclick="move(<?php echo $this->originId ?>,'remainingRegions','assignedRegions',true,'add')" class="scalable" type="button">&gt;&gt;</button>
+    </div>
+    <div class="assigned">
+        <select id="assignedRegions" size="10" class="select multiselect dos-regions" multiple="multiple">
+            <?php foreach($this->GetAssignedRegions() as $region): ?>
+                <option value="<?php echo $region['value'] ?>"><?php echo $region['label']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+<div id="post-url" data-url="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>originajax/ajax/update/"></div>
+</div>
+
+<script type="text/javascript">
+
+    window.addEventListener("load", function(){
+        combobox = document.getElementById('combobox').cloneNode(true);
+        document.getElementById('combobox').remove();
+        document.getElementById('general').appendChild(combobox);
+    });
+
+</script>
+<?php endif; ?>

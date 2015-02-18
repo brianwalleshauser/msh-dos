@@ -1,0 +1,29 @@
+2015-02-18T15:39:09+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [accept_UPS_license_agreement] => yes
+            [10_action] => 4
+            [13_product] => GNDRES
+            [14_origCountry] => US
+            [15_origPostal] => 90034
+            [origCity] => 
+            [19_destPostal] => 14225
+            [22_destCountry] => US
+            [23_weight] => 10
+            [47_rate_chart] => Customer Counter
+            [48_container] => 00
+            [49_residential] => 01
+            [weight_std] => lbs
+        )
+
+    [result] => UPSOnLine4%1DM%90034%US%14225%US%108%10%159.34%0.00%159.34% 8:00 A.M.%
+4%1DA%90034%US%14225%US%108%10%127.84%0.00%127.84%10:30 A.M.%
+4%1DP%90034%US%14225%US%138%10%126.47%0.00%126.47%End of Day%
+4%2DA%90034%US%14225%US%208%10%78.12%0.00%78.12%End of Day%
+4%3DS%90034%US%14225%US%308%10%58.09%0.00%58.09%End of Day%
+4%GND%90034%US%14225%US%008%10%26.81%0.00%26.81%End of Day%
+
+    [__pid] => 8812
+)
+

@@ -1,0 +1,35 @@
+<config>
+    <menu>
+        <dos translate="title" module="dos">
+            <title>Dynamic Origin Shipping</title>
+            <sort_order>75</sort_order>
+            <depends>
+                <module>Mainstreethost_DynamicOriginShipping</module>
+            </depends>
+            <children>
+                <origin translate="title" module="dos">
+                    <title>Manage Origins</title>
+                    <sort_order>10</sort_order>
+                    <action>dos_admin/origin</action>
+                </origin>
+            </children>
+        </dos>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <dos translate="title" module="dos">
+                        <title>Dynamic Origin Shipping</title>
+                        <sort_order>75</sort_order>
+                        <children>
+                            <origin translate="title" module="dos">
+                                <title>Manage Origins</title>
+                            </origin>
+                        </children>
+                    </dos>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

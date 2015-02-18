@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <dos_admin_origin_edit>
+        <reference name="content">
+            <block type="dos/adminhtml_origin_edit_combobox" name="dos_edit_combobox"/>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><name>dos_style.css</name></action>
+            <!--<action method="removeItem"><type>js</type><name>prototype/prototype.js</name></action>-->
+            <action method="addJs"><script>msh_dos/jquery.js</script></action>
+            <action method="addJs"><script>msh_dos/combobox.js</script></action>
+            <action method="addJs"><script>prototype/prototype.js</script></action>
+        </reference>
+    </dos_admin_origin_edit>
+</layout>

@@ -1,0 +1,22 @@
+div.combobox {
+    height:225px;
+    margin-top: 20px;
+}
+
+div.remaining, div.assigned {
+    float: left;
+    width: 12%;
+    height:100%;
+}
+
+div.movement-buttons {
+    float: left;
+    padding-top: 4%;
+    width: 2%;
+    text-align: center;
+}
+
+div.remaining select, div.assigned select {
+    width: 100%;
+    height:100%;
+}
