@@ -9,6 +9,7 @@ class Mainstreethost_DynamicOriginShipping_Helper_Data extends Mage_Core_Helper_
 {
     public function GetRegions($grid)
     {
+        /* TODO */
         $USRegions = Mage::getSingleton('dos/origin')->GetStates('US');
         $CNRegions = Mage::getSingleton('dos/origin')->GetStates('CA');
         $regions = $USRegions->getItems() + $CNRegions->getItems();
@@ -29,6 +30,25 @@ class Mainstreethost_DynamicOriginShipping_Helper_Data extends Mage_Core_Helper_
                 ));
             }
         }
+
+        return $regionArray;
+    }
+
+
+    public function GetCountries()
+    {
+        /* TODO */
+
+        $regionArray = array(
+            array(
+                'value' => 'US',
+                'label' => 'United States of America'
+            ),
+            array(
+                'value' => 'CA',
+                'label' => 'Canada'
+            )
+        );
 
         return $regionArray;
     }
@@ -119,7 +139,6 @@ class Mainstreethost_DynamicOriginShipping_Helper_Data extends Mage_Core_Helper_
                 {
                     $store->setConfig('shipping/origin/' . $_scope, $_val);
                 }
-                $store->save();
             }
         }
     }

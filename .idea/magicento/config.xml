@@ -1203,7 +1203,11 @@
                 </entities>
             </salesrule_resource><usa>
                 <class>Mage_Usa_Model</class>
-            </usa><paygate>
+            <rewrite>
+                    <shipping_carrier_ups>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Ups</shipping_carrier_ups>
+                    <shipping_carrier_fedex>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Fedex</shipping_carrier_fedex>
+                    <shipping_carrier_usps>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Usps</shipping_carrier_usps>
+                </rewrite></usa><paygate>
                 <class>Mage_Paygate_Model</class>
                 <resourceModel>paygate_resource</resourceModel>
             </paygate><paygate_resource>
@@ -1769,9 +1773,7 @@
                 <class>Mage_Sales_Block</class>
             </sales><checkout>
                 <class>Mage_Checkout_Block</class>
-            <rewrite>
-                    <cart_shipping>Mainstreethost_DynamicOriginShipping_Block_Checkout_Cart_Shipping</cart_shipping>
-                </rewrite></checkout><directpost><class>Mage_Authorizenet_Block_Directpost</class></directpost><paypal>
+            </checkout><directpost><class>Mage_Authorizenet_Block_Directpost</class></directpost><paypal>
                 <class>Mage_Paypal_Block</class>
             </paypal><poll>
                 <class>Mage_Poll_Block</class>

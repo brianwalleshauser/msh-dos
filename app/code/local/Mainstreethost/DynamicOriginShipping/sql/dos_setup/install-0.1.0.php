@@ -100,13 +100,86 @@ $table->addColumn(
     )
 );
 $table->addColumn(
-    'statemap',
-    Varien_Db_Ddl_Table::TYPE_LONGVARCHAR,
-    null,
+    'country',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => false,
+    )
+);
+$table->addColumn(
+    'usps_userid',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
     array(
         'nullable' => true,
     )
 );
+$table->addColumn(
+    'usps_password',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'ups_license',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'ups_userid',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'ups_password',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'fedex_meternumber',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'fedex_key',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'fedex_userid',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+$table->addColumn(
+    'fedex_password',
+    Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    255,
+    array(
+        'nullable' => true,
+    )
+);
+
 
 /**
  * These two important lines are often missed.

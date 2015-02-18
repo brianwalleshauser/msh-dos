@@ -22,6 +22,13 @@
                     </states>
                 </entities>
             </dos_resource>
+            <usa>
+                <rewrite>
+                    <shipping_carrier_ups>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Ups</shipping_carrier_ups>
+                    <shipping_carrier_fedex>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Fedex</shipping_carrier_fedex>
+                    <shipping_carrier_usps>Mainstreethost_DynamicOriginShipping_Model_Usa_Shipping_Carrier_Usps</shipping_carrier_usps>
+                </rewrite>
+            </usa>
         </models>
         <events>
             <msh_dos_shipping>
@@ -38,11 +45,11 @@
             <dos>
                 <class>Mainstreethost_DynamicOriginShipping_Block</class>
             </dos>
-            <checkout>
-                <rewrite>
-                    <cart_shipping>Mainstreethost_DynamicOriginShipping_Block_Checkout_Cart_Shipping</cart_shipping>
-                </rewrite>
-            </checkout>
+            <!--<checkout>-->
+                <!--<rewrite>-->
+                    <!--<cart_shipping>Mainstreethost_DynamicOriginShipping_Block_Checkout_Cart_Shipping</cart_shipping>-->
+                <!--</rewrite>-->
+            <!--</checkout>-->
         </blocks>
         <helpers>
             <dos>

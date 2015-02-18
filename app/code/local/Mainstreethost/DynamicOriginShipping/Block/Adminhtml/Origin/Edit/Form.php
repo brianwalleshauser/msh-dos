@@ -62,8 +62,57 @@ class Mainstreethost_DynamicOriginShipping_Block_Adminhtml_Origin_Edit_Form exte
                 'input' => 'text',
                 'required' => true,
             ),
-
-
+            'country' => array(
+                'label' => $this->__('Country'),
+                'input' => 'select',
+                'required' => true,
+                'values' => Mage::helper('dos')->GetCountries(),
+            ),
+//            'usps_userid' => array(
+//                'label' => $this->__('USPS User ID'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'usps_password' => array(
+//                'label' => $this->__('USPS Password'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'ups_license' => array(
+//                'label' => $this->__('UPS License'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'ups_userid' => array(
+//                'label' => $this->__('UPS User ID'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'ups_password' => array(
+//                'label' => $this->__('UPS Password'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'fedex_meternumber' => array(
+//                'label' => $this->__('FedEx Meter Number'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'fedex_key' => array(
+//                'label' => $this->__('FedEx Key'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'fedex_userid' => array(
+//                'label' => $this->__('FedEx User ID'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
+//            'fedex_password' => array(
+//                'label' => $this->__('FedEx Password'),
+//                'input' => 'text',
+//                'required' => false,
+//            ),
 
 
             /**
