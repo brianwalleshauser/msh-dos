@@ -1,1 +1,0 @@
-<?php define('PATH_TO_MAGENTO', '../..');require_once PATH_TO_MAGENTO.'/app/Mage.php';Mage::app('');echo 'MAGICENTO';
