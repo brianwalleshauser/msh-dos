@@ -6,7 +6,7 @@
 
 <?php if($this->originId): ?>
 <div id="combobox" class="combobox">
-    <div class="remaining">
+    <div class="remaining" style="text-align:center">Available Regions<br />
         <select id="remainingRegions" size="10" class="select multiselect dos-regions" multiple="multiple">
             <?php foreach($this->GetRemainingRegions() as $region): ?>
                 <option value="<?php echo $region['value'] ?>"><?php echo $region['label']; ?></option>
@@ -20,7 +20,7 @@
         <button id="moveToRight" title="Move Selected" onclick="move(<?php echo $this->originId ?>,'remainingRegions','assignedRegions',false,'add')" class="scalable" type="button">&gt;</button>
         <button id="moveAllToRight" title="Move All" onclick="move(<?php echo $this->originId ?>,'remainingRegions','assignedRegions',true,'add')" class="scalable" type="button">&gt;&gt;</button>
     </div>
-    <div class="assigned">
+    <div class="assigned" style="text-align:center">Assigned Regions<br />
         <select id="assignedRegions" size="10" class="select multiselect dos-regions" multiple="multiple">
             <?php foreach($this->GetAssignedRegions() as $region): ?>
                 <option value="<?php echo $region['value'] ?>"><?php echo $region['label']; ?></option>
